@@ -49,7 +49,7 @@ export default function Home() {
           <span>
             <img width={40} src="/doc.png" alt="doc" />
           </span>
-          My Todo List
+          Your Todo List
         </h2>
 
         {/* Input + Add button */}
@@ -72,6 +72,7 @@ export default function Home() {
         {/* Task list */}
         <div className="h-[60vh] overflow-auto w-full">
           <h2 className="font-bold my-2 text-center text-2xl">Your Tasks</h2>
+          {tasklist.length==0 && <p>no task</p>}
           <ul className="flex flex-col gap-3">
             {tasklist.map((taskObj) => (
               <li key={taskObj._id} className="flex items-center my-2">
