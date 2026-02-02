@@ -5,7 +5,6 @@ import clientPromise from "@/app/lib/mongodb";
 const client = await clientPromise;
 
 const dbName = 'todoss';
-await client.connect();
 const db = client.db(dbName);
 const collection = db.collection('todo');
 export async function POST(request) {
