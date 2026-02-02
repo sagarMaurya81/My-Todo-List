@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { MongoClient } from 'mongodb'
 import { ObjectId } from "mongodb";
 
-const url = 'mongodb://localhost:27017';
+const url = process.env.MONGODB_URI;
 const client = new MongoClient(url);
 
 const dbName = 'todoss';
