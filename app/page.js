@@ -38,7 +38,7 @@ export default function Home() {
 
   // Delete task
   const deleteTask = async (id) => {
-    await axios.delete("/api/todo/route.js", { data: { _id: id } });
+    await axios.delete("/api/todo", { data: { _id: id } });
     fetchData();
   };
 
