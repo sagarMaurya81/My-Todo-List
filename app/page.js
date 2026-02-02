@@ -38,8 +38,15 @@ export default function Home() {
 
   // Delete task
   const deleteTask = async (id) => {
-    await axios.delete("/api/todo", { data: { _id: id } });
-    fetchData();
+    let con = confirm("Are you sure ?")
+    if(con){
+      await axios.delete("/api/todo", { data: { _id: id } });
+      fetchData();
+    }
+    else{
+      alert("Not deleted !")
+    }
+    
   };
 
   return (
