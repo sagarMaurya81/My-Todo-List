@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
-import { MongoClient } from 'mongodb'
 import { ObjectId } from "mongodb";
+import clientPromise from "@/app/lib/mongodb";
 
-const url = process.env.MONGODB_URI;
-const client = new MongoClient(url);
+const client = await clientPromise;
 
 const dbName = 'todoss';
 await client.connect();

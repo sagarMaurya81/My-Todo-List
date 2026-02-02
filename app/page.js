@@ -32,7 +32,7 @@ export default function Home() {
 
   // Fetch tasks
   const fetchData = async () => {
-    const res = await axios.get("/api/todo/route.js");
+    const res = await axios.get("/api/todo");
     setTasklist(res.data);
   };
 
@@ -47,7 +47,7 @@ export default function Home() {
       <div className="bg-zinc-600 w-150 flex flex-col justify-center items-center p-3 rounded-md shadow-lg">
         <h2 className="flex justify-center items-center">
           <span>
-            <img width={40} src="public/doc.png" alt="doc" />
+            <img width={40} src="/doc.png" alt="doc" />
           </span>
           Your Todo List
         </h2>
@@ -87,7 +87,7 @@ export default function Home() {
                     onClick={() => deleteTask(taskObj._id)}
                     className="cursor-pointer mx-2"
                     width={20}
-                    src="public/delete.gif"
+                    src="/delete.gif"
                     alt="delete"
                   />
                 </span>
